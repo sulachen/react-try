@@ -19,11 +19,18 @@ class Square extends React.Component {
         super(props);
         this.state = {
           value: null,
+          square: Array(9).fill(null)
         };
       }
     
     abc(){
         alert(this.props.value);
+    }
+
+    handleClick(){
+        const sq = this.state.square.slice();
+        sq[i] = 'X';
+        this.setState({ square : sq });
     }
 
     render() {
